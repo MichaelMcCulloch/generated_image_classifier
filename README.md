@@ -27,11 +27,11 @@ This tool uses a **Dual-Domain Decision Tree** to classify images based on three
 
 ### **Setup**
 
-\# Clone the repository  
-git clone \[https://github.com/yourusername/entropy-analysis.git\](https://github.com/yourusername/entropy-analysis.git)  
+# Clone the repository  
+git clone [https://github.com/yourusername/entropy-analysis.git](https://github.com/yourusername/entropy-analysis.git)  
 cd entropy-analysis
 
-\# Install dependencies  
+# Install dependencies  
 pip install torch numpy scipy pillow
 
 ## **Usage**
@@ -59,11 +59,11 @@ fake/face.jpg: AI | Kurtosis=14.48 (Gaussian Texture)
 
 *Reasoning:* The kurtosis is extremely low, indicating the image lacks the "spiky" edge statistics of a real camera.  
 **Example 2: A Real Photo**  
-real/face.jpg: Photographic | Kurtosis=74.10 (\>45)
+real/face.jpg: Photographic | Kurtosis=74.10 (>45)
 
 *Reasoning:* High kurtosis indicates natural lighting and sensor physics.  
 **Example 3: The "Gray Zone" (Hard Case)**  
-fake/face2.jpg: AI | Kurtosis=31.24 (Gray Zone), NoiseCorr=0.335 (\>0.275)
+fake/face2.jpg: AI | Kurtosis=31.24 (Gray Zone), NoiseCorr=0.335 (>0.275)
 
 *Reasoning:* The gradient stats (31.24) were ambiguous, but the high neighbor correlation (0.335) revealed the smoothness of an AI upsampler.
 
